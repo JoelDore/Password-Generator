@@ -29,21 +29,25 @@ function generatePassword() {
     // Validate length is within bounds
     if (pwLength < 8 || pwLength > 128) {
         alert('Sorry, password must be between 8 and 128 characters.');
-        break
-    }
-    // Prompt user for character types (loop) and add to array of desired characters
-    var charBank = [];
-    for (key in charTypes) {
-        if (confirm(prompts.key) === true) {
-            charBank.push(charTypes.key);
+        break;
+    } else {
+        // Prompt user for character types (loop) and add to array of desired characters
+        var charBank = [];
+        for (key in charTypes) {
+            if (confirm(prompts.key) === true) {
+                charBank.push(charTypes.key);
+            };
         };
-    };
-    // Validate at least one type selected
+        // Validate at least one type selected
+        if (charBank = []) {
+            alert('You must select at least one character type.');
+            break;
+        } else {
+            // Loop through new array to select random characters for password
 
-    // Loop through new array to select random characters for password
-
-    // Return password as string (.join)
-
+            // Return password as string (.join)
+        }
+    }
 }
 
 // Add event listener to generate button
