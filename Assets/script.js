@@ -12,36 +12,34 @@ function writePassword() {
 // Function to generate password string
 function generatePassword() {
     // Create objects with arrays of possible characters types & corresponding prompt messages
-    var charTypes = {
-        lc: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
-        uc: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        digits: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
-        symbols: ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', "\\", ']', '^', '_', '`', '{', '|', '}', '~']
-    };
-    var prompts = {
-        lc: 'Should the password contain lowercase letters?',
-        uc: 'Should the password contain uppercase letters?',
-        digits: 'Should the password contain numbers?',
-        symbols: 'Should the password contain special characters?'
-    };
+    var charTypes = [
+        ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+        ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+        ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', "\\", ']', '^', '_', '`', '{', '|', '}', '~']
+    ];
+    var prompts = [
+        'Should the password contain lowercase letters?',
+        'Should the password contain uppercase letters?',
+        'Should the password contain numbers?',
+        'Should the password contain special characters?'
+    ];
     // Prompt user for length of password
     var pwLength = parseInt(prompt('Enter length of desired password:'));
     // Validate length is within bounds
     if (pwLength < 8 || pwLength > 128) {
         alert('Sorry, password must be between 8 and 128 characters.');
-        break;
     } else {
         // Prompt user for character types (loop) and add to array of desired characters
         var charBank = [];
-        for (key in charTypes) {
-            if (confirm(prompts.key) === true) {
-                charBank.push(charTypes.key);
+        for (var i = 0; i < charTypes.length; i++) {
+            if (confirm(prompts[i]) === true) {
+                charBank = charBank.concat(charTypes[i])
             };
         };
         // Validate at least one type selected
-        if (charBank = []) {
+        if (charBank === []) {
             alert('You must select at least one character type.');
-            break;
         } else {
             // Loop through new array to select random characters for password
             var pwArray = [];
