@@ -44,8 +44,12 @@ function generatePassword() {
             break;
         } else {
             // Loop through new array to select random characters for password
-
+            var pwArray = [];
+            for (var i = 0; i < pwLength; i++) {
+                pwArray.push(charBank[Math.floor(Math.random() * charBank.length)]);
+            }
             // Return password as string (.join)
+            return pwArray.join('');
         }
     }
 }
