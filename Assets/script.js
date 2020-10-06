@@ -38,7 +38,7 @@ function generatePassword() {
             };
         };
         // Validate at least one type selected
-        if (charBank === []) {
+        if (charBank.length === 0) {
             alert('You must select at least one character type.');
         } else {
             // Loop through new array to select random characters for password
