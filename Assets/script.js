@@ -11,7 +11,7 @@ function writePassword() {
 
 // Function to generate password string
 function generatePassword() {
-    // Create objects with arrays of possible characters types and prompt messages
+    // Create objects with arrays of possible characters types & corresponding prompt messages
     var charTypes = {
         lc: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
         uc: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
@@ -19,10 +19,10 @@ function generatePassword() {
         symbols: ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', "\\", ']', '^', '_', '`', '{', '|', '}', '~']
     };
     var prompts = {
-        lc: ['Should the password contain lowercase letters?'],
-        uc: ['Should the password contain uppercase letters?'],
-        digits: ['Should the password contain numbers?'],
-        symbols: ['Should the password contain special characters?']
+        lc: 'Should the password contain lowercase letters?',
+        uc: 'Should the password contain uppercase letters?',
+        digits: 'Should the password contain numbers?',
+        symbols: 'Should the password contain special characters?'
     };
     // Prompt user for length of password
     var pwLength = parseInt(prompt('Enter length of desired password:'));
@@ -32,7 +32,12 @@ function generatePassword() {
         break
     }
     // Prompt user for character types (loop) and add to array of desired characters
-
+    var charBank = [];
+    for (key in charTypes) {
+        if (confirm(prompts.key) === true) {
+            charBank.push(charTypes.key);
+        };
+    };
     // Validate at least one type selected
 
     // Loop through new array to select random characters for password
