@@ -32,19 +32,22 @@ function generatePassword() {
     } else {
         // Prompt user for character types (loop) and add to array of desired characters
         var charBank = [];
+        var count = 0;
         for (var i = 0; i < charTypes.length; i++) {
             if (confirm(prompts[i]) === true) {
-                charBank = charBank.concat(charTypes[i])
+                charBank.push(charTypes[i])
+                count += 1;
             };
         };
         // Validate at least one type selected
-        if (charBank.length === 0) {
+        if (count === 0) {
             alert('You must select at least one character type.');
         } else {
             // Loop through new array to select random characters for password
             var pwArray = [];
             for (var i = 0; i < pwLength; i++) {
-                pwArray.push(charBank[Math.floor(Math.random() * charBank.length)]);
+                var j = i % charBank.length
+                pwArray.push(charBank[j][Math.floor(Math.random() * charBank[j].length)])
             }
             // Return password as string (.join)
             return pwArray.join('');
