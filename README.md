@@ -23,6 +23,6 @@ This project is [MIT](https://github.com/JoelDore/Password-Generator/blob/main/L
 <div align="center">
 
 [![linkedin](https://i.imgur.com/qvrM5Um_d.webp)](https://www.linkedin.com/in/joeldore/)
-[![github](https://i.imgur.com/LHjsfr3.png)](https://github.com/JoelDore)
+[![github](Assets/Images/github-logo.png)](https://github.com/JoelDore)
 
 </div>
