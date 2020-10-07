@@ -34,7 +34,7 @@ function generatePassword() {
         var charBank = [];
         var count = 0;
         for (var i = 0; i < charTypes.length; i++) {
-            if (confirm(prompts[i]) === true) {
+            if (confirm(prompts[i] + ' Click \"OK\" for yes, or \"Cancel\" for no.') === true) {
                 charBank.push(charTypes[i])
                 count += 1;
             };
