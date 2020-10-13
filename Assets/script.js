@@ -29,6 +29,7 @@ function generatePassword() {
     // Validate length is within bounds
     if (pwLength < 8 || pwLength > 128) {
         alert('Sorry, password must be between 8 and 128 characters.');
+        return '';
     } else {
         // Prompt user for character types (loop) and add to array of desired characters
         var charBank = [];
@@ -42,6 +43,7 @@ function generatePassword() {
         // Validate at least one type selected
         if (count === 0) {
             alert('You must select at least one character type.');
+            return '';
         } else {
             // Loop through new array to select random characters for password
             var pwArray = [];
