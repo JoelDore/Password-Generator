@@ -14,48 +14,27 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #2d96ff;
 }
 
 .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  padding: 30px;
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 3px 2px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
-}
-
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+  text-align: center;
+  margin: auto;
+  max-width: 600px;
+  padding: 30px 30px;
 }
 
 .card-body {
   min-height: 100px;
-}
-
-.card-footer {
-  text-align: center;
 }
 
 .card-footer::before {
@@ -66,25 +45,18 @@ header {
   height: 2px;
 }
 
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px 1px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
+  font-weight: 600;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
-  text-align: center;
   cursor: pointer;
 }
 
