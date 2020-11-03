@@ -17,6 +17,9 @@ generateBtn.addEventListener("click", writePassword);
 
 function writePassword() {
     passwordText.value = generatePassword();
+    // Automatically select text when generated
+    passwordText.focus();
+    passwordText.select();
 }
 
 function generatePassword() {
