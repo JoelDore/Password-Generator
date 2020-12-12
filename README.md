@@ -6,6 +6,8 @@
 
 Currently deployed at [GitHub Pages](https://joeldore.github.io/Password-Generator/)
 
+---
+
 ## Description
 
 This application generates a random secure password based on user-selected criteria. This app runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript with a clean and responsive UI.
@@ -15,11 +17,15 @@ User's input is validated to meet client-specified requirements:
     * Password length (8-128 characters)
     * Must select at least one character type (lowercase, uppercase, numeric, or special characters)
 
+---
+
 ## Future Development
 
-* Redesign CSS
+* Add 'Copy password to clipboard' modal button
 
-* Select password text upon generation with option to copy (in a tooltip?)
+* Refactor alerts into modals
+
+---
 
 ## 📝 License
 Copyright © 2020 [Joel Dore](https://github.com/JoelDore)  
