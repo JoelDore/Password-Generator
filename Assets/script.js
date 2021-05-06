@@ -64,7 +64,7 @@ function generatePassword() {
                 let j = i % charBank.length;
                 pwArray.push(charBank[j][Math.floor(Math.random() * charBank[j].length)]);
             }
-            return pwArray.join('');
+            return shuffle(pwArray).join('');
         }
     }
 }
