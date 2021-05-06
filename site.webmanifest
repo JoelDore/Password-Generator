@@ -14,5 +14,6 @@
     ],
     "theme_color": "#af0808",
     "background_color": "#af0808",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "https://joeldore.github.io/Password-Generator/"
 }
