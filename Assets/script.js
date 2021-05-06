@@ -22,6 +22,17 @@ function writePassword() {
     passwordText.select();
 }
 
+function shuffle(arr) {
+    let arrCopy = [...arr]
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const jthItem = arrCopy[j]
+        arrCopy[j] = arrCopy[i]
+        arrCopy[i] = jthItem
+    }
+    return arrCopy
+}
+
 function generatePassword() {
     // Prompt user for length of password
     let pwLength = parseInt(prompt('Enter length of desired password:'));
