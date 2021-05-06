@@ -15,6 +15,6 @@
     "theme_color": "#af0808",
     "background_color": "#af0808",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/Password-Generator/",
     "start_url": "/"
 }
